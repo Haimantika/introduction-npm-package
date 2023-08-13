@@ -18,33 +18,50 @@ cd my-npx-intro
 ## Step 3: Initialize Your Package
 
 Initialize your project as a Node.js package using the following command:
+
 ```bash
 npm init -y
 ```
 
-## Create an Executable Script:
+## Create an Executable Script
+
 Inside your project directory, create a JavaScript file that will serve as the executable script for your npx command. Let's call this file index.js. You can follow my example or edit it accordingly.
 
 ### Make sure to define bin in 'package.json'
+
 ```json
 "bin": {
   "my-npx-command": "./index.js"
 },
 ```
-## Make the Script Executable:
+
+## Make the Script Executable
+
 In your terminal, make your script file executable by running:
+
+### For Linux
 
 ```bash
 chmod +x index.js
 ```
 
+### For Windows
+
+**Note:** git should be installed.
+
+```powershell
+git update-index --chmod=+x index.js
+```
+
 ## Test your command
+
 - Link the package using `npm link`
 - Test by running the command `npx package-name`
 - If it works as expected, make sure to unlink it using `npm unlink -g directory-name`
 
 ## Publish your package
-- Make an [npm account](https://www.npmjs.com/) 
+
+- Make an [npm account](https://www.npmjs.com/)
 - Login to your account using the command `npm login`
 - Publish the package using the command `npm publish`
 
